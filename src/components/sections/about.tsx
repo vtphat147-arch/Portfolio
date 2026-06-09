@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { PERSONAL_INFO, ABOUT_TEXT } from "@/lib/data";
 import { SectionWrapper, SectionHeading } from "@/components/section-wrapper";
 import { FiMapPin, FiBookOpen, FiBriefcase } from "react-icons/fi";
@@ -47,15 +48,25 @@ export function About() {
             {/* Decorative ring */}
             <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20 blur-xl" />
             <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-background shadow-xl sm:h-64 sm:w-64 lg:h-72 lg:w-72">
-              {/* TODO: Replace with your actual photo */}
-              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
-                <span className="text-6xl font-bold text-white sm:text-7xl">
-                  {PERSONAL_INFO.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </span>
-              </div>
+              {PERSONAL_INFO.avatarUrl ? (
+                <Image
+                  src={PERSONAL_INFO.avatarUrl}
+                  alt={PERSONAL_INFO.name}
+                  fill
+                  sizes="(max-width: 768px) 224px, 288px"
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+                  <span className="text-6xl font-bold text-white sm:text-7xl">
+                    {PERSONAL_INFO.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </span>
+                </div>
+              )}
             </div>
             {/* Floating badge */}
             <motion.div

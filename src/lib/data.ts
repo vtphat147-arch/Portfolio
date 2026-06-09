@@ -12,7 +12,7 @@ export const PERSONAL_INFO = {
   education: "FPT University",
   yearsOfExperience: "1+",
   resumeUrl: "/resume.pdf", // TODO: Copy your CV PDF to public/resume.pdf
-  avatarUrl: "/images/profile.png", // TODO: Replace with your photo
+  avatarUrl: "/images/Gemini_Generated_Image_azx6tbazx6tbazx6.png",
 };
 
 export const SOCIAL_LINKS = {
