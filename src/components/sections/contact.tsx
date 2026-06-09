@@ -15,6 +15,7 @@ import {
   FiMapPin,
   FiLoader,
 } from "react-icons/fi";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 export function Contact() {
   const ref = useRef<HTMLDivElement>(null);
@@ -224,34 +225,46 @@ export function Contact() {
                   icon: FiGithub,
                   href: SOCIAL_LINKS.github,
                   label: "GitHub",
+                  value: "vtphat147-arch",
                 },
                 {
                   icon: FiLinkedin,
                   href: SOCIAL_LINKS.linkedin,
                   label: "LinkedIn",
+                  value: "vtphat147",
                 },
                 {
                   icon: FiMail,
                   href: SOCIAL_LINKS.email,
                   label: "Email",
+                  value: "vtphat147@gmail.com",
                 },
               ].map((social) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  target={social.label !== "Email" ? "_blank" : undefined}
-                  rel={
-                    social.label !== "Email"
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-indigo-500/50 hover:bg-accent hover:text-foreground"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-4 w-4" />
-                </motion.a>
+                <Tooltip key={social.label}>
+                  <TooltipTrigger
+                    render={
+                      <motion.a
+                        href={social.href}
+                        target={social.label !== "Email" ? "_blank" : undefined}
+                        rel={
+                          social.label !== "Email"
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-indigo-500/50 hover:bg-accent hover:text-foreground"
+                        aria-label={social.label}
+                      />
+                    }
+                  >
+                    <social.icon className="h-4 w-4" />
+                  </TooltipTrigger>
+                  <TooltipContent className="bg-indigo-600 text-white font-semibold shadow-md px-3 py-1.5 rounded-lg text-xs border border-indigo-400/20 dark:bg-indigo-500">
+                    <span className="font-bold">{social.label}</span>
+                    <span className="opacity-80 ml-1">({social.value})</span>
+                  </TooltipContent>
+                </Tooltip>
               ))}
             </div>
           </div>

@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   title: "Software Engineer",
   tagline:
     "FPT University graduate with hands-on experience building enterprise SAP Fiori solutions. Passionate about clean code, modern web technologies, and delivering impactful software.",
-  email: "your.email@example.com", // TODO: Replace with your email
+  email: "vtphat147@gmail.com",
   location: "Ho Chi Minh City, Vietnam",
   education: "FPT University",
   yearsOfExperience: "1+",
@@ -16,8 +16,8 @@ export const PERSONAL_INFO = {
 };
 
 export const SOCIAL_LINKS = {
-  github: "https://github.com/yourusername", // TODO: Replace with your GitHub
-  linkedin: "https://linkedin.com/in/yourusername", // TODO: Replace with your LinkedIn
+  github: "https://github.com/vtphat147-arch",
+  linkedin: "https://www.linkedin.com/in/vtphat147/",
   email: `mailto:${PERSONAL_INFO.email}`,
 };
 
@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
       "Led a 5-member team to architect and deliver a 22-feature enterprise system replacing legacy SAP SM36/SM37 transactions, across a 15-week Agile lifecycle. Built a real-time job failure monitor with 3-level auto-escalation via Email (Brevo API) and Microsoft Teams (Azure Logic Apps).",
     image: "/images/project-1.png", // TODO: Add project screenshot
     tags: ["SAP Fiori", "OData V4", "Azure Logic Apps", "Brevo API", "AI Copilot"],
-    githubUrl: "https://github.com/yourusername/job-scheduling", // TODO: Update
+    githubUrl: "https://github.com/vtphat147-arch/job-scheduling",
     status: "completed",
   },
   {
@@ -134,7 +134,7 @@ export const PROJECTS: Project[] = [
       "Developed a modern SAP Fiori dashboard supporting job lifecycle actions (Create, Release, Repeat, Copy, Stop, Delete) and an analytical drill-down page with KPI charts powered by OData V4.",
     image: "/images/project-2.png", // TODO: Add project screenshot
     tags: ["SAP Fiori", "SAPUI5", "OData V4", "KPI Charts"],
-    githubUrl: "https://github.com/yourusername/fiori-dashboard", // TODO: Update
+    githubUrl: "https://github.com/vtphat147-arch/fiori-dashboard",
     status: "completed",
   },
   {
@@ -153,7 +153,7 @@ export const PROJECTS: Project[] = [
       "This portfolio — built with Next.js 14, Framer Motion, Tailwind CSS, and shadcn/ui. Modern design with dark mode, smooth animations, and responsive layout.",
     image: "/images/project-4.png", // TODO: Add project screenshot
     tags: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    githubUrl: "https://github.com/yourusername/portfolio", // TODO: Update
+    githubUrl: "https://github.com/vtphat147-arch/portfolio",
     liveUrl: "#",
     status: "completed",
   },

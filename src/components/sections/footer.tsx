@@ -2,15 +2,16 @@
 
 import { PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/data";
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from "react-icons/fi";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: FiGithub, href: SOCIAL_LINKS.github, label: "GitHub" },
-    { icon: FiLinkedin, href: SOCIAL_LINKS.linkedin, label: "LinkedIn" },
-    { icon: FiMail, href: SOCIAL_LINKS.email, label: "Email" },
+    { icon: FiGithub, href: SOCIAL_LINKS.github, label: "GitHub", value: "vtphat147-arch" },
+    { icon: FiLinkedin, href: SOCIAL_LINKS.linkedin, label: "LinkedIn", value: "vtphat147" },
+    { icon: FiMail, href: SOCIAL_LINKS.email, label: "Email", value: "vtphat147@gmail.com" },
   ];
 
   return (
@@ -23,20 +24,29 @@ export function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                target={social.label !== "Email" ? "_blank" : undefined}
-                rel={
-                  social.label !== "Email" ? "noopener noreferrer" : undefined
-                }
-                whileHover={{ scale: 1.15, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
-                aria-label={social.label}
-              >
-                <social.icon className="h-5 w-5" />
-              </motion.a>
+              <Tooltip key={social.label}>
+                <TooltipTrigger
+                  render={
+                    <motion.a
+                      href={social.href}
+                      target={social.label !== "Email" ? "_blank" : undefined}
+                      rel={
+                        social.label !== "Email" ? "noopener noreferrer" : undefined
+                      }
+                      whileHover={{ scale: 1.15, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
+                      aria-label={social.label}
+                    />
+                  }
+                >
+                  <social.icon className="h-5 w-5" />
+                </TooltipTrigger>
+                <TooltipContent className="bg-indigo-600 text-white font-semibold shadow-md px-3 py-1.5 rounded-lg text-xs border border-indigo-400/20 dark:bg-indigo-500">
+                  <span className="font-bold">{social.label}</span>
+                  <span className="opacity-80 ml-1">({social.value})</span>
+                </TooltipContent>
+              </Tooltip>
             ))}
           </div>
 

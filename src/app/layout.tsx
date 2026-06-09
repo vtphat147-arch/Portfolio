@@ -10,33 +10,36 @@ const inter = Inter({
   display: "swap",
 });
 
-// TODO: Update metadata with your actual information
+// SEO Metadata
 export const metadata: Metadata = {
-  title: "Your Name — Full-Stack Developer Portfolio", // TODO: Replace with your name
+  title: "Võ Thành Phát — Software Engineer Portfolio",
   description:
-    "Personal portfolio of a passionate full-stack developer. Explore projects, skills, and experience in modern web development.", // TODO: Customize
+    "Personal portfolio of Võ Thành Phát, a Software Engineer with experience in building enterprise SAP Fiori solutions, ReactJS, and ASP.NET. Explore my projects, skills, and achievements.",
   keywords: [
+    "Võ Thành Phát",
+    "Software Engineer",
+    "SAP Fiori",
+    "ReactJS",
+    "ASP.NET",
     "developer",
     "portfolio",
-    "full-stack",
     "web development",
-    "react",
     "next.js",
     "typescript",
   ],
-  authors: [{ name: "Your Name" }], // TODO: Replace with your name
+  authors: [{ name: "Võ Thành Phát" }],
   openGraph: {
-    title: "Your Name — Full-Stack Developer Portfolio",
+    title: "Võ Thành Phát — Software Engineer Portfolio",
     description:
-      "Personal portfolio showcasing projects, skills, and experience in modern web development.",
+      "Personal portfolio of Võ Thành Phát showcasing enterprise projects, skills, and experience in software engineering.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name — Full-Stack Developer Portfolio",
+    title: "Võ Thành Phát — Software Engineer Portfolio",
     description:
-      "Personal portfolio showcasing projects, skills, and experience.",
+      "Personal portfolio of Võ Thành Phát showcasing enterprise projects, skills, and experience in software engineering.",
   },
   robots: {
     index: true,
