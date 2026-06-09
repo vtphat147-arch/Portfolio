@@ -72,9 +72,12 @@ export function About() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-              className="absolute -bottom-2 -right-2 rounded-xl border border-border/60 bg-background/90 px-3 py-1.5 text-sm font-medium shadow-lg backdrop-blur-sm"
+              className="absolute -bottom-2 -right-2 rounded-xl border border-indigo-500/30 bg-card px-4 py-2 text-sm font-semibold shadow-xl"
             >
-              💻 {PERSONAL_INFO.title}
+              <span className="flex items-center gap-1.5">
+                <span>💻</span>
+                <span className="gradient-text">{PERSONAL_INFO.title}</span>
+              </span>
             </motion.div>
           </div>
         </motion.div>
