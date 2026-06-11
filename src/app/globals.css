@@ -188,8 +188,29 @@
   box-shadow: 0 0 30px rgba(99, 102, 241, 0.25), 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Global Butter-Smooth Theme Switch Transition */
+/* Global Butter-Smooth Theme Switch Transition (Optimized Performance) */
 .theme-transition,
-.theme-transition * {
-  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease, fill 0.5s ease, stroke 0.5s ease, box-shadow 0.5s ease !important;
+.theme-transition body,
+.theme-transition header,
+.theme-transition footer,
+.theme-transition nav,
+.theme-transition section,
+.theme-transition .glass-card,
+.theme-transition .glass,
+.theme-transition h1,
+.theme-transition h2,
+.theme-transition h3,
+.theme-transition h4,
+.theme-transition h5,
+.theme-transition h6,
+.theme-transition p,
+.theme-transition a,
+.theme-transition li,
+.theme-transition span,
+.theme-transition button,
+.theme-transition input,
+.theme-transition textarea,
+.theme-transition select,
+.theme-transition .section-divider {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
 }

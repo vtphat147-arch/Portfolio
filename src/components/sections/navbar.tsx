@@ -117,7 +117,7 @@ export function Navbar() {
                   setTheme(theme === "dark" ? "light" : "dark");
                   setTimeout(() => {
                     document.documentElement.classList.remove("theme-transition");
-                  }, 500);
+                  }, 300);
                 }}
                 className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                 aria-label="Toggle theme"
