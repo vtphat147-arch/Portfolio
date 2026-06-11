@@ -112,7 +112,13 @@ export function Navbar() {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() => {
+                  document.documentElement.classList.add("theme-transition");
+                  setTheme(theme === "dark" ? "light" : "dark");
+                  setTimeout(() => {
+                    document.documentElement.classList.remove("theme-transition");
+                  }, 500);
+                }}
                 className="rounded-lg p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
                 aria-label="Toggle theme"
               >
