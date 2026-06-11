@@ -130,7 +130,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "edu-health",
-    title: "🏥 EduHealth — Integrated School Health & Medical Management System",
+    title: "🏥 EduHealth - Integrated School Health & Medical Management System",
     description:
       "An integrated school health and medical management system designed for school nurses, admins, and parents. It tracks comprehensive student health records, logs clinic visits, and facilitates school-wide medical management.",
     image: "/images/project-2.png",
@@ -141,7 +141,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "zenith-ui",
-    title: "ZenithUI — Minimalist UI Component Library",
+    title: "ZenithUI - Minimalist UI Component Library",
     description:
       "A free, minimalist UI/UX component library built with a modern Glassmorphism aesthetic. Features interactive and vivid 3D animations to enhance developer workflow and user engagement.",
     image: "/images/project-3.png",
@@ -251,9 +251,9 @@ export const TIMELINE: TimelineItem[] = [
   {
     id: "timeline-1",
     type: "work",
-    title: "Academic Capstone Project — Team Leader",
+    title: "Academic Capstone Project - Team Leader",
     organization: "FPT University HCM (scope by FPT Software)",
-    dateRange: "2025 — 2026",
+    dateRange: "2025 - 2026",
     description:
       "Led a 5-member team to architect and deliver a 22-feature enterprise system replacing legacy SAP SM36/SM37, across 15-week Agile lifecycle. Built real-time monitoring with auto-escalation, SAP Fiori dashboard with KPI analytics, and integrated Microsoft Copilot Studio AI Agent.",
   },
@@ -262,7 +262,7 @@ export const TIMELINE: TimelineItem[] = [
     type: "work",
     title: "Software Engineer Intern",
     organization: "FPT Software · Ho Chi Minh City",
-    dateRange: "Jan 2025 — May 2025",
+    dateRange: "Jan 2025 - May 2025",
     description:
       "Gained practical experience across the SAP ecosystem including SAP RAP, SAP Fiori, SAP BTP, and enterprise modules. Developed and delivered features for enterprise products, presented to stakeholders across sprint reviews.",
   },
@@ -271,7 +271,7 @@ export const TIMELINE: TimelineItem[] = [
     type: "education",
     title: "Bachelor of Software Engineering",
     organization: "FPT University · Ho Chi Minh City",
-    dateRange: "2022 — 2026",
+    dateRange: "2022 - 2026",
     description:
       "Graduated with GPA 7.6/10. Focused on software engineering, web development, and enterprise solutions. Active in team-based Agile projects and academic research.",
   },
