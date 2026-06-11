@@ -82,41 +82,34 @@ export function Projects() {
               className="group glass-card glow-hover overflow-hidden rounded-2xl"
             >
               {/* Project Image / Placeholder */}
-              <div className={`relative h-48 overflow-hidden border-b border-border/40 ${
-                project.id === "portfolio"
-                  ? "bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5"
-                  : "bg-white"
-              }`}>
-                {project.image ? (
-                  <div className={project.id !== "portfolio" ? "absolute inset-6" : "absolute inset-0"}>
+              <div className="relative h-48 overflow-hidden border-b border-border/40 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10">
+                {/* Decorative geometric pattern */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="grid grid-cols-4 gap-3 opacity-20">
+                    {Array.from({ length: 16 }).map((_, j) => (
+                      <div
+                        key={j}
+                        className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 to-purple-500"
+                        style={{
+                          opacity: 0.2 + Math.random() * 0.6,
+                          transform: `rotate(${Math.random() * 45}deg)`,
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Project Image (Logo Overlay) */}
+                {project.image && (
+                  <div className="absolute inset-6">
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className={`transition-transform duration-500 group-hover:scale-105 ${
-                        project.id === "portfolio"
-                          ? "object-cover object-top"
-                          : "object-contain"
-                      }`}
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
                       priority={i < 2}
                     />
-                  </div>
-                ) : (
-                  /* Decorative geometric pattern */
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="grid grid-cols-4 gap-3 opacity-20">
-                      {Array.from({ length: 16 }).map((_, j) => (
-                        <div
-                          key={j}
-                          className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 to-purple-500"
-                          style={{
-                            opacity: 0.2 + Math.random() * 0.6,
-                            transform: `rotate(${Math.random() * 45}deg)`,
-                          }}
-                        />
-                      ))}
-                    </div>
                   </div>
                 )}
 
