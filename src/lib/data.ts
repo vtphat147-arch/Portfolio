@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
     title: "🛠️ SAP Background Job Management Suite (SAP-BJSMS)",
     description:
       "An enterprise-grade, unified SAP Background Job Management Suite built using SAPUI5 / Fiori Elements. This monorepo consolidates three specialized applications (Enterprise Job Scheduling System, SAP Fiori Analytics Dashboard, and AI Copilot Integration) designed to streamline the lifecycle of background jobs, providing real-time operations, analytical insights, and high-level management.",
-    image: "/images/project-1.png",
+    image: "/logo/SAP.png",
     tags: ["SAPUI5", "Node.js", "License Framework", "OData V4", "Fiori Elements"],
     githubUrl: "https://github.com/vtphat147-arch/SAP-BJSMS",
     liveUrl: "https://sap-bjsms.vercel.app/",
@@ -133,7 +133,7 @@ export const PROJECTS: Project[] = [
     title: "🏥 EduHealth - Integrated School Health & Medical Management System",
     description:
       "An integrated school health and medical management system designed for school nurses, admins, and parents. It tracks comprehensive student health records, logs clinic visits, and facilitates school-wide medical management.",
-    image: "/images/project-2.png",
+    image: "/logo/EduHealtj.png",
     tags: ["ReactJS", "Node.js", "Express", "Tailwind CSS", "MongoDB"],
     githubUrl: "https://github.com/vtphat147-arch/EduHealth",
     liveUrl: "https://edu-health-six.vercel.app/",
@@ -144,7 +144,7 @@ export const PROJECTS: Project[] = [
     title: "ZenithUI - Minimalist UI Component Library",
     description:
       "A free, minimalist UI/UX component library built with a modern Glassmorphism aesthetic. Features interactive and vivid 3D animations to enhance developer workflow and user engagement.",
-    image: "/images/project-3.png",
+    image: "/logo/ZenithUI.png",
     tags: ["ReactJS", "TypeScript", "Tailwind CSS", "Framer Motion", "3D Animations"],
     githubUrl: "https://github.com/vtphat147-arch/ZenithUI",
     liveUrl: "https://zenith-ui-two.vercel.app/",
@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
     title: "Personal Portfolio Website",
     description:
       "A personal portfolio built with Next.js 14, Framer Motion, Tailwind CSS, and shadcn/ui. Featuring a modern minimalist design, dark mode, smooth page transitions, and responsive layout.",
-    image: "/images/project-4.png",
+    image: "/logo/Port.png",
     tags: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
     githubUrl: "https://github.com/vtphat147-arch/Portfolio",
     liveUrl: "https://vtp-portfolio.vercel.app/",

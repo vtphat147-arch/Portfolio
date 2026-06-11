@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { PROJECTS } from "@/lib/data";
 import { SectionWrapper, SectionHeading } from "@/components/section-wrapper";
 import { Badge } from "@/components/ui/badge";
@@ -81,22 +82,33 @@ export function Projects() {
               className="group glass-card glow-hover overflow-hidden rounded-2xl"
             >
               {/* Project Image / Placeholder */}
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10">
-                {/* Decorative geometric pattern */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="grid grid-cols-4 gap-3 opacity-20">
-                    {Array.from({ length: 16 }).map((_, j) => (
-                      <div
-                        key={j}
-                        className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 to-purple-500"
-                        style={{
-                          opacity: 0.2 + Math.random() * 0.6,
-                          transform: `rotate(${Math.random() * 45}deg)`,
-                        }}
-                      />
-                    ))}
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5 border-b border-border/40">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    priority={i < 2}
+                  />
+                ) : (
+                  /* Decorative geometric pattern */
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="grid grid-cols-4 gap-3 opacity-20">
+                      {Array.from({ length: 16 }).map((_, j) => (
+                        <div
+                          key={j}
+                          className="h-6 w-6 rounded-md bg-gradient-to-br from-indigo-500 to-purple-500"
+                          style={{
+                            opacity: 0.2 + Math.random() * 0.6,
+                            transform: `rotate(${Math.random() * 45}deg)`,
+                          }}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Status badge */}
                 {project.status === "in-progress" && (
