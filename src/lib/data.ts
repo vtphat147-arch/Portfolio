@@ -118,43 +118,47 @@ export interface Project {
 // TODO: Replace/add your actual projects
 export const PROJECTS: Project[] = [
   {
-    id: "project-1",
-    title: "Enterprise Job Scheduling System",
+    id: "sap-bjsms",
+    title: "🛠️ SAP Background Job Management Suite (SAP-BJSMS)",
     description:
-      "Led a 5-member team to architect and deliver a 22-feature enterprise system replacing legacy SAP SM36/SM37 transactions, across a 15-week Agile lifecycle. Built a real-time job failure monitor with 3-level auto-escalation via Email (Brevo API) and Microsoft Teams (Azure Logic Apps).",
-    image: "/images/project-1.png", // TODO: Add project screenshot
-    tags: ["SAP Fiori", "OData V4", "Azure Logic Apps", "Brevo API", "AI Copilot"],
-    githubUrl: "https://github.com/vtphat147-arch/job-scheduling",
+      "An enterprise-grade, unified SAP Background Job Management Suite built using SAPUI5 / Fiori Elements. This monorepo consolidates three specialized applications (Enterprise Job Scheduling System, SAP Fiori Analytics Dashboard, and AI Copilot Integration) designed to streamline the lifecycle of background jobs, providing real-time operations, analytical insights, and high-level management.",
+    image: "/images/project-1.png",
+    tags: ["SAPUI5", "Node.js", "License Framework", "OData V4", "Fiori Elements"],
+    githubUrl: "https://github.com/vtphat147-arch/SAP-BJSMS",
+    liveUrl: "https://sap-bjsms.vercel.app/",
     status: "completed",
   },
   {
-    id: "project-2",
-    title: "SAP Fiori Analytics Dashboard",
+    id: "edu-health",
+    title: "🏥 EduHealth — Integrated School Health & Medical Management System",
     description:
-      "Developed a modern SAP Fiori dashboard supporting job lifecycle actions (Create, Release, Repeat, Copy, Stop, Delete) and an analytical drill-down page with KPI charts powered by OData V4.",
-    image: "/images/project-2.png", // TODO: Add project screenshot
-    tags: ["SAP Fiori", "SAPUI5", "OData V4", "KPI Charts"],
-    githubUrl: "https://github.com/vtphat147-arch/fiori-dashboard",
+      "An integrated school health and medical management system designed for school nurses, admins, and parents. It tracks comprehensive student health records, logs clinic visits, and facilitates school-wide medical management.",
+    image: "/images/project-2.png",
+    tags: ["ReactJS", "Node.js", "Express", "Tailwind CSS", "MongoDB"],
+    githubUrl: "https://github.com/vtphat147-arch/EduHealth",
+    liveUrl: "https://edu-health-six.vercel.app/",
     status: "completed",
   },
   {
-    id: "project-3",
-    title: "AI Copilot Integration",
+    id: "zenith-ui",
+    title: "ZenithUI — Minimalist UI Component Library",
     description:
-      "Integrated a Microsoft Copilot Studio AI Agent consuming a custom OData V4 API to query job failures ranked by RiskScore via natural language — enabling non-technical users to interact with enterprise data.",
-    image: "/images/project-3.png", // TODO: Add project screenshot
-    tags: ["Microsoft Copilot Studio", "OData V4", "AI/NLP", "SAP BTP"],
+      "A free, minimalist UI/UX component library built with a modern Glassmorphism aesthetic. Features interactive and vivid 3D animations to enhance developer workflow and user engagement.",
+    image: "/images/project-3.png",
+    tags: ["ReactJS", "TypeScript", "Tailwind CSS", "Framer Motion", "3D Animations"],
+    githubUrl: "https://github.com/vtphat147-arch/ZenithUI",
+    liveUrl: "https://zenith-ui-two.vercel.app/",
     status: "completed",
   },
   {
-    id: "project-4",
+    id: "portfolio",
     title: "Personal Portfolio Website",
     description:
-      "This portfolio — built with Next.js 14, Framer Motion, Tailwind CSS, and shadcn/ui. Modern design with dark mode, smooth animations, and responsive layout.",
-    image: "/images/project-4.png", // TODO: Add project screenshot
+      "A personal portfolio built with Next.js 14, Framer Motion, Tailwind CSS, and shadcn/ui. Featuring a modern minimalist design, dark mode, smooth page transitions, and responsive layout.",
+    image: "/images/project-4.png",
     tags: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    githubUrl: "https://github.com/vtphat147-arch/portfolio",
-    liveUrl: "#",
+    githubUrl: "https://github.com/vtphat147-arch/Portfolio",
+    liveUrl: "https://vtp-portfolio.vercel.app/",
     status: "completed",
   },
 ];

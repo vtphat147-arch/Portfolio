@@ -112,19 +112,6 @@ export function Projects() {
 
                 {/* Hover overlay with links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 bg-background/80 opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100">
-                  {project.githubUrl && (
-                    <motion.a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="rounded-full border border-border bg-background p-3 shadow-lg transition-colors hover:bg-accent"
-                      aria-label={`${project.title} GitHub`}
-                    >
-                      <FiGithub className="h-5 w-5" />
-                    </motion.a>
-                  )}
                   {project.liveUrl && (
                     <motion.a
                       href={project.liveUrl}
@@ -138,13 +125,37 @@ export function Projects() {
                       <FiExternalLink className="h-5 w-5" />
                     </motion.a>
                   )}
+                  {project.githubUrl && (
+                    <motion.a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="rounded-full border border-border bg-background p-3 shadow-lg transition-colors hover:bg-accent"
+                      aria-label={`${project.title} GitHub`}
+                    >
+                      <FiGithub className="h-5 w-5" />
+                    </motion.a>
+                  )}
                 </div>
               </div>
 
               {/* Project Info */}
               <div className="p-6">
                 <h3 className="mb-2 text-lg font-semibold text-foreground group-hover:text-indigo-500 transition-colors">
-                  {project.title}
+                  {project.liveUrl || project.githubUrl ? (
+                    <a
+                      href={project.liveUrl || project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
                 </h3>
                 <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                   {project.description}
